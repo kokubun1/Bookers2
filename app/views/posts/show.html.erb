@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+<h2>Title:</h2>
+<p><%= @post.title %></p>
+<h2>Body:</h2>
+<p><%= @post.body %></p>
+
+<td>
+<%= link_to "Edit", edit_post_path(@post.id),class: "edit_#{@post.id}"%>
+<%= link_to "back", '/posts/new',class: "back"%>
+</td>
+
+
